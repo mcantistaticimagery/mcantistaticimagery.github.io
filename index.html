@@ -1,37 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rickroll</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            background-color: black;
-        }
-        #video-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: black;
-        }
-        video {
-            display: block;
-            max-width: 100%;
-            max-height: 100%;
-        }
-    </style>
-</head>
-<body>
-    <div id="video-container">
-        <video autoplay controls>
-            <source src="https://shattereddisk.github.io/rickroll/rickroll.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Rickroll Educational Video</title>
+      <style>body{font-family:Arial,sans-serif;margin:0;padding:0;background-color:#f4f4f4;color:#333}.container{max-width:800px;margin:0 auto;padding:20px;background-color:#fff;box-shadow:0 2px 4px rgba(0,0,0,.1);border-radius:5px;margin-top:50px;text-align:center}h1,p{text-align:center;margin-top:10px;margin-bottom:10px}#video-container{display:none;text-align:center}video{max-width:100%;border-radius:5px}button{padding:10px 20px;background-color:#007bff;color:#fff;border:none;border-radius:5px;cursor:pointer;font-size:16px;margin-top:20px}button:hover{background-color:#0056b3}</style>
+   </head>
+   <body>
+      <div class="container">
+         <h1>Welcome to Michael's Educational Center</h1>
+         <p>This educational video is brought to you by Michael's Antistatic Imagery™</p>
+         <p id="learn-more" style="display:block">Learn more about Michael's Antistatic Imagery™ by clicking this button here!</p>
+         <div id="video-container">
+            <video controls id="video-player">
+               <source src="https://shattereddisk.github.io/rickroll/rickroll.mp4" type="video/mp4">
+            </video>
+         </div>
+         <button id="play-button" onclick="playVideo()">Watch Video</button>
+      </div>
+      <script>function playVideo(){var e=document.getElementById("video-container"),t=document.getElementById("play-button"),n=document.getElementById("video-player"),l=document.getElementById("learn-more");e.style.display="block",n.play(),t.style.display="none",l.style.display="none"}</script>
+   </body>
 </html>
