@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Michael's Antistatic Imagery™</title>
-      <style>
-         body {
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Michael's Antistatic Imagery™</title>
+    <style>
+        body {
          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
          margin: 0;
          padding: 0;
@@ -73,44 +74,44 @@
          button:active {
          transform: translateY(1px);
          }
-      </style>
-   </head>
-   <body>
-      <div class="container">
-         <h1>Welcome to Michael's Educational Center</h1>
-         <p>This educational mobile depiction is brought to you by Michael's Antistatic Imagery™</p>
-         <p id="learn-more">Learn more about Michael's Antistatic Imagery™ by clicking this button here!</p>
-         <div id="video-container">
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Michael's Educational Center</h1>
+        <p>This educational mobile depiction is brought to you by Michael's Antistatic Imagery™</p>
+        <p id="learn-more">Learn more about Michael's Antistatic Imagery™ by clicking this button here!</p>
+        <div id="video-container">
             <video controls id="video-player">
-               <source src="https://shattereddisk.github.io/rickroll/rickroll.mp4" type="video/mp4">
-               Your browser does not support the video tag.
+                <source src="https://shattereddisk.github.io/rickroll/rickroll.mp4" type="video/mp4"> Your browser does not support the video tag.
             </video>
-         </div>
-         <button id="play-button" onclick="playVideo()">Watch Kinetic Presentation</button>
-      </div>
-      <script>
-         function playVideo() {
-             var videoContainer = document.getElementById("video-container");
-             var playButton = document.getElementById("play-button");
-             var videoPlayer = document.getElementById("video-player");
-             var learnMore = document.getElementById("learn-more");
-         
-             learnMore.innerHTML = "";
-         
-             learnMore.innerHTML = "HAHAS GET RICKROLLED LOOOOOL";
-         
-             var intervalId = setInterval(function() {
-                 var randomX = Math.random() * 10 - 5; // Random value between -5 and 5
-                 var randomY = Math.random() * 10 - 5; // Random value between -5 and 5
-                 learnMore.style.transform = "translate(" + randomX + "px, " + randomY + "px)";
-             }, 50);
-         
-             document.getElementsByTagName("h1")[0].style.display = "none";
-             document.getElementsByTagName("p")[0].style.display = "none";
-             document.getElementById("video-container").style.display = "block";
-             document.getElementById("play-button").style.display = "none";
-             videoPlayer.play();
-         }
-      </script>
-   </body>
+        </div>
+        <button id="play-button" onclick="playVideo()">Watch Kinetic Presentation</button>
+    </div>
+    <script>
+        function playVideo() {
+            var videoContainer = document.getElementById("video-container");
+            var playButton = document.getElementById("play-button");
+            var videoPlayer = document.getElementById("video-player");
+            var learnMore = document.getElementById("learn-more");
+    
+            learnMore.innerHTML = "HAHAS GET RICKROLLED LOOOOOL";
+    
+            var intervalId = setInterval(function() {
+                var randomX = Math.random() * 10 - 5; // Random value between -5 and 5
+                var randomY = Math.random() * 10 - 5; // Random value between -5 and 5
+                learnMore.style.transform = "translate(" + randomX + "px, " + randomY + "px)";
+            }, 50);
+    
+            document.getElementsByTagName("h1")[0].style.display = "none";
+            document.getElementsByTagName("p")[0].style.display = "none";
+            document.getElementById("video-container").style.display = "block";
+            document.getElementById("play-button").style.display = "none";
+            videoPlayer.play();
+        }
+    </script>
+
+</body>
+
 </html>
