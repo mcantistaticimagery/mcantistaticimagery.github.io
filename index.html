@@ -1,24 +1,116 @@
-<!doctype html>
-<html lang=en>
+<!DOCTYPE html>
+<html lang="en">
    <head>
-      <meta charset=UTF-8>
-      <meta name=viewport content="width=device-width,initial-scale=1">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Michael's Antistatic Imagery™</title>
-      <style>body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;margin:0;padding:0;background-color:#f8f9fa;color:#333;line-height:1.6}.container{max-width:800px;margin:50px auto;padding:20px;background-color:#fff;box-shadow:0 0 10px rgba(0,0,0,.1);border-radius:8px;text-align:center;animation:fadeIn 1s ease,breathe 5s infinite alternate ease-in-out}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes breathe{0%{transform:scale(1)}100%{transform:scale(1.02)}}h1{font-size:36px;margin-bottom:20px;color:#007bff}p{font-size:18px;margin-bottom:20px}#video-container{display:none;text-align:center}video{max-width:100%;border-radius:8px}button{padding:12px 24px;background-color:#007bff;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:18px;transition:background-color .3s ease,transform .2s ease}button:hover{background-color:#0056b3;transform:translateY(-3px)}button:active{transform:translateY(1px)}</style>
+      <style>
+         body {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         margin: 0;
+         padding: 0;
+         background-color: #f8f9fa;
+         color: #333;
+         line-height: 1.6;
+         }
+         .container {
+         max-width: 800px;
+         margin: 50px auto;
+         padding: 20px;
+         background-color: #ffffff;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         border-radius: 8px;
+         text-align: center;
+         animation: fadeIn 1s ease, breathe 5s infinite alternate ease-in-out;
+         }
+         @keyframes fadeIn {
+         from {
+         opacity: 0;
+         }
+         to {
+         opacity: 1;
+         }
+         }
+         @keyframes breathe {
+         0% {
+         transform: scale(1);
+         }
+         100% {
+         transform: scale(1.02);
+         }
+         }
+         h1 {
+         font-size: 36px;
+         margin-bottom: 20px;
+         color: #007bff;
+         }
+         p {
+         font-size: 18px;
+         margin-bottom: 20px;
+         }
+         #video-container {
+         display: none;
+         text-align: center;
+         }
+         video {
+         max-width: 100%;
+         border-radius: 8px;
+         }
+         button {
+         padding: 12px 24px;
+         background-color: #007bff;
+         color: #fff;
+         border: none;
+         border-radius: 8px;
+         cursor: pointer;
+         font-size: 18px;
+         transition: background-color 0.3s ease, transform 0.2s ease;
+         }
+         button:hover {
+         background-color: #0056b3;
+         transform: translateY(-3px);
+         }
+         button:active {
+         transform: translateY(1px);
+         }
+      </style>
    </head>
    <body>
-      <div class=container>
+      <div class="container">
          <h1>Welcome to Michael's Educational Center</h1>
          <p>This educational mobile depiction is brought to you by Michael's Antistatic Imagery™</p>
-         <p id=learn-more>Learn more about Michael's Antistatic Imagery™ by clicking this button here!</p>
-         <div id=video-container>
-            <video controls id=video-player>
-               <source src=https://shattereddisk.github.io/rickroll/rickroll.mp4 type=video/mp4>
+         <p id="learn-more">Learn more about Michael's Antistatic Imagery™ by clicking this button here!</p>
+         <div id="video-container">
+            <video controls id="video-player">
+               <source src="https://shattereddisk.github.io/rickroll/rickroll.mp4" type="video/mp4">
                Your browser does not support the video tag.
             </video>
          </div>
-         <button id=play-button onclick=playVideo()>Watch Kinetic Presentation</button>
+         <button id="play-button" onclick="playVideo()">Watch Kinetic Presentation</button>
       </div>
-      <script>function playVideo(){document.getElementById("video-container"),document.getElementById("play-button");var e=document.getElementById("video-player"),t=document.getElementById("learn-more");t.innerHTML="",t.innerHTML="HAHA GET RICKROLLED LOOOOOL";setInterval((function(){var e=10*Math.random()-5,n=10*Math.random()-5;t.style.transform="translate("+e+"px, "+n+"px)"}),50);document.getElementsByTagName("h1")[0].style.display="none",document.getElementsByTagName("p")[0].style.display="none",document.getElementById("video-container").style.display="block",document.getElementById("play-button").style.display="none",e.play()}</script>
+      <script>
+         function playVideo() {
+             var videoContainer = document.getElementById("video-container");
+             var playButton = document.getElementById("play-button");
+             var videoPlayer = document.getElementById("video-player");
+             var learnMore = document.getElementById("learn-more");
+         
+             learnMore.innerHTML = "";
+         
+             learnMore.innerHTML = "HAHAS GET RICKROLLED LOOOOOL";
+         
+             var intervalId = setInterval(function() {
+                 var randomX = Math.random() * 10 - 5; // Random value between -5 and 5
+                 var randomY = Math.random() * 10 - 5; // Random value between -5 and 5
+                 learnMore.style.transform = "translate(" + randomX + "px, " + randomY + "px)";
+             }, 50);
+         
+             document.getElementsByTagName("h1")[0].style.display = "none";
+             document.getElementsByTagName("p")[0].style.display = "none";
+             document.getElementById("video-container").style.display = "block";
+             document.getElementById("play-button").style.display = "none";
+             videoPlayer.play();
+         }
+      </script>
    </body>
 </html>
