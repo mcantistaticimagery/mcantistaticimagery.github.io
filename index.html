@@ -89,28 +89,30 @@
         </div>
         <button id="play-button" onclick="playVideo()">Watch Kinetic Presentation</button>
     </div>
-    <script>
-        function playVideo() {
-            var videoContainer = document.getElementById("video-container");
-            var playButton = document.getElementById("play-button");
-            var videoPlayer = document.getElementById("video-player");
-            var learnMore = document.getElementById("learn-more");
-    
-            learnMore.innerHTML = "HAHAS GET RICKROLLED LOOOOOL";
-    
-            var intervalId = setInterval(function() {
-                var randomX = Math.random() * 10 - 5; // Random value between -5 and 5
-                var randomY = Math.random() * 10 - 5; // Random value between -5 and 5
-                learnMore.style.transform = "translate(" + randomX + "px, " + randomY + "px)";
-            }, 50);
-    
-            document.getElementsByTagName("h1")[0].style.display = "none";
-            document.getElementsByTagName("p")[0].style.display = "none";
-            document.getElementById("video-container").style.display = "block";
-            document.getElementById("play-button").style.display = "none";
-            videoPlayer.play();
-        }
-    </script>
+<script>
+    function playVideo() {
+        var videoContainer = document.getElementById("video-container");
+        var playButton = document.getElementById("play-button");
+        var videoPlayer = document.getElementById("video-player");
+        var learnMore = document.getElementById("learn-more");
+
+        document.getElementsByTagName("h1")[0].style.display = "none";
+        document.getElementsByTagName("p")[0].style.display = "none";
+        document.getElementById("video-container").style.display = "block";
+        document.getElementById("play-button").style.display = "none";
+
+        learnMore.innerHTML = "HAHAS GET RICKROLLED LOOOOOL";
+
+        var intervalId = setInterval(function() {
+            var randomX = Math.random() * 10 - 5; // Random value between -5 and 5
+            var randomY = Math.random() * 10 - 5; // Random value between -5 and 5
+            learnMore.style.transform = "translate(" + randomX + "px, " + randomY + "px)";
+        }, 50);
+
+        videoPlayer.play();
+    }
+</script>
+
 
 </body>
 
