@@ -1,29 +1,147 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
 
 <head>
-    <meta charset=UTF-8>
-    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Michael's Antistatic Imagery™</title>
     <style>
-        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;margin:0;padding:0;background-color:#f8f9fa;color:#333;line-height:1.6}.container{max-width:800px;margin:50px auto;padding:20px;background-color:#fff;box-shadow:0 0 10px rgba(0,0,0,0.1);border-radius:8px;text-align:center;animation:fadeIn 1s ease,breathe 5s infinite alternate ease-in-out}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes breathe{0%{transform:scale(1)}100%{transform:scale(1.025)}}@keyframes waving{0%{transform:rotate(-0.4deg)}100%{transform:rotate(0.4deg)}}h1,p{font-size:18px;margin-bottom:20px;animation:waving 2s infinite alternate}h1{font-size:36px;margin-bottom:20px;color:#007bff;animation:none}#video-container{display:none;text-align:center}video{max-width:100%;border-radius:8px}button{padding:12px 24px;background-color:#007bff;color:#fff;border:0;border-radius:8px;cursor:pointer;font-size:18px;transition:background-color .3s ease,transform .2s ease}button:hover{background-color:#0056b3;transform:translateY(-3px)}button:active{transform:translateY(1px)}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            animation: fadeIn 1s ease, breathe 5s infinite alternate ease-in-out
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes breathe {
+            0% {
+                transform: scale(1)
+            }
+
+            100% {
+                transform: scale(1.025)
+            }
+        }
+
+        @keyframes waving {
+            0% {
+                transform: rotate(-0.4deg)
+            }
+
+            100% {
+                transform: rotate(0.4deg)
+            }
+        }
+
+        h1,
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            animation: waving 2s infinite alternate
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #007bff;
+            animation: none
+        }
+
+        #video-container {
+            display: none;
+            text-align: center
+        }
+
+        video {
+            max-width: 100%;
+            border-radius: 8px
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #fff;
+            border: 0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color .3s ease, transform .2s ease
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px)
+        }
+
+        button:active {
+            transform: translateY(1px)
+        }
+        
+        /* New button style */
+        .advertising-button {
+            margin-top: 20px;
+        }
     </style>
 </head>
 
 <body>
-    <div class=container>
+    <div class="container">
         <h1>Welcome to Michael's Educational Center</h1>
         <p>This educational mobile depiction is brought to you by Michael's Antistatic Imagery™</p>
-        <p id=learn-more class=waving-text>Learn more about Michael's Antistatic Imagery™ by clicking this button here!</p>
-        <div id=video-container>
-            <video controls id=video-player>
-                <source src=https://shattereddisk.github.io/rickroll/rickroll.mp4 type=video/mp4> Your browser does not support the video tag.
+        <p id="learn-more" class="waving-text">Learn more about Michael's Antistatic Imagery™ by clicking this button here!</p>
+        <div id="video-container">
+            <video controls id="video-player">
+                <source src="https://shattereddisk.github.io/rickroll/rickroll.mp4" type="video/mp4"> Your browser does not support the video tag.
             </video>
         </div>
-        <button id=play-button onclick=playVideo()>Watch Kinetic Presentation</button>
+        <button id="play-button" onclick="playVideo()">Watch Kinetic Presentation</button>
+        <!-- New button for advertising -->
+        <a href="games.html" class="advertising-button">
+            <button>Check out our Games</button>
+        </a>
     </div>
     <script>
-        function playVideo(){var a=document.getElementById("video-container");var d=document.getElementById("play-button");var c=document.getElementById("video-player");var e=document.getElementById("learn-more");document.getElementsByTagName("h1")[0].style.display="none";document.getElementsByTagName("p")[0].style.display="none";document.getElementById("video-container").style.display="block";document.getElementById("play-button").style.display="none";e.innerHTML="HAHAS GET RICKROLLED LOOOOOL";e.style.animation="none";var b=setInterval(function(){var g=Math.random()*10-5;var f=Math.random()*10-5;e.style.transform="translate("+g+"px, "+f+"px)"},50);c.play()};
+        function playVideo() {
+            var a = document.getElementById("video-container");
+            var d = document.getElementById("play-button");
+            var c = document.getElementById("video-player");
+            var e = document.getElementById("learn-more");
+            document.getElementsByTagName("h1")[0].style.display = "none";
+            document.getElementsByTagName("p")[0].style.display = "none";
+            document.getElementById("video-container").style.display = "block";
+            document.getElementById("play-button").style.display = "none";
+            e.innerHTML = "HAHAS GET RICKROLLED LOOOOOL";
+            e.style.animation = "none";
+            var b = setInterval(function () {
+                var g = Math.random() * 10 - 5;
+                var f = Math.random() * 10 - 5;
+                e.style.transform = "translate(" + g + "px, " + f + "px)"
+            }, 50);
+            c.play()
+        };
     </script>
 </body>
 
